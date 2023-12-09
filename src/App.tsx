@@ -1,23 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { TitleHeavy } from 'components/text/styled';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <p>만다라트 만드러용!!의 시작입니다</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          저에용
         </a>
+        <TitleHeavy>만다라트만들어보겠소만</TitleHeavy>
       </header>
     </div>
   );
