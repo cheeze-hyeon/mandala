@@ -1,22 +1,24 @@
 import React from 'react';
 import './App.css';
-import { TitleHeavy } from 'components/text/styled';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homepage from 'routes/home/Homepage';
+import ChatPage from 'routes/chat/ChatPage';
+import QuestionPage from 'routes/question/QuestionPage';
+import Resultpage from 'routes/result/ResultPage';
+import CheerPage from 'routes/cheer/CheerPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>만다라트 만드러용!!의 시작입니다</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          저에용
-        </a>
-        <TitleHeavy>만다라트만들어보겠소만</TitleHeavy>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/question" element={<QuestionPage />} />
+          <Route path="/result" element={<Resultpage />} />
+          <Route path="/cheer" element={<CheerPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
